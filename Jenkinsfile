@@ -12,17 +12,11 @@ pipeline {
 
             steps {
                 sh '''
-                echo "Checking Node & npm versions"
-                node -v
-                npm -v
-                echo "Cleaning environment"
-                rm -rf node_modules
-                npm cache clean --force
-                echo "Installing dependencies"
-                npm install
-                echo "Building the app"
-                npm run build
-                ls -la 
+                 ls -la
+                   node --version
+                   npm --version
+                   npm ci
+                   npm run build
                 '''
             }
         }
