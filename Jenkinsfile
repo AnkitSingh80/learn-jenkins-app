@@ -19,7 +19,7 @@ pipeline {
                 rm -rf node_modules
                 npm cache clean --force
                 echo "Installing dependencies"
-                npm ci
+                npm install
                 echo "Building the app"
                 npm run build
                 ls -la 
